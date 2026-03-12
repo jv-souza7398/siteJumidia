@@ -100,7 +100,6 @@ function VideoModal({ video, onClose }: { video: PortfolioItem; onClose: () => v
               onLoadedData={handleVideoLoad}
               onCanPlay={handleVideoLoad}
               onError={handleVideoError}
-              crossOrigin="anonymous"
             >
               <source src={video.videoUrl} type={getVideoType(video.videoUrl)} />
               Seu navegador não suporta a reprodução de vídeos.
@@ -245,7 +244,6 @@ function VideoCard({ item, index }: { item: PortfolioItem; index: number; onOpen
             preload="metadata"
             onLoadedData={handleVideoLoad}
             onError={handleVideoError}
-            crossOrigin="anonymous"
           >
             <source src={item.videoUrl} type={getVideoType(item.videoUrl)} />
           </video>
