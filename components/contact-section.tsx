@@ -34,7 +34,7 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     // Format the message for WhatsApp
     const message = `*Nova mensagem do site*
 
@@ -47,10 +47,10 @@ ${formData.message}`
 
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(message)
-    
+
     // WhatsApp number (remove formatting)
     const phoneNumber = "5511972802151"
-    
+
     // Open WhatsApp with the pre-filled message
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank")
   }
@@ -97,7 +97,7 @@ ${formData.message}`
               className="animate-on-scroll max-w-md text-pretty text-lg leading-relaxed text-cream/80 opacity-0"
               style={{ animationDelay: "0.2s" }}
             >
-              Estamos prontos para transformar suas ideias em realidade. Entre em contato e deixe que eu ajude sua marca a crescer e se destacar.
+              Entre em contato e deixe que eu ajude sua marca a crescer e se destacar.
             </p>
 
             {/* Contact Details */}
