@@ -46,7 +46,7 @@ function VideoModal({ video, onClose }: { video: PortfolioItem; onClose: () => v
   }, [isLoading, hasError])
 
   return (
-    <div 
+    <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
       onClick={onClose}
     >
@@ -61,7 +61,7 @@ function VideoModal({ video, onClose }: { video: PortfolioItem; onClose: () => v
       </button>
 
       {/* Video Container */}
-      <div 
+      <div
         className="relative w-full max-w-5xl px-4"
         onClick={(e) => e.stopPropagation()}
       >
@@ -78,9 +78,9 @@ function VideoModal({ video, onClose }: { video: PortfolioItem; onClose: () => v
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
               <p className="mb-2 text-lg">Erro ao carregar o vídeo</p>
               <p className="text-sm text-white/60">Formato não suportado pelo navegador</p>
-              <a 
-                href={video.videoUrl} 
-                target="_blank" 
+              <a
+                href={video.videoUrl}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 rounded-full bg-wine-dark px-6 py-2 text-sm font-medium text-cream transition-colors hover:bg-wine-accent"
               >
@@ -119,61 +119,61 @@ function VideoModal({ video, onClose }: { video: PortfolioItem; onClose: () => v
 }
 
 const portfolioItems: PortfolioItem[] = [
-  { 
-    id: 1, 
-    title: "Doc. Vincci", 
-    category: "Campanha/Lançamento", 
+  {
+    id: 1,
+    title: "Doc. Vincci",
+    category: "Campanha/Lançamento",
     color: "bg-wine-dark",
-    videoUrl: "http://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/campanha-lan%C3%A7amento/doc.%20vincci.mpg"
+    videoUrl: "https://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/campanha-lan%C3%A7amento/doc.%20vincci.mp4"
   },
-  { 
-    id: 2, 
-    title: "Dra. Thaynara", 
-    category: "Campanha/Lançamento", 
+  {
+    id: 2,
+    title: "Dra. Thaynara",
+    category: "Campanha/Lançamento",
     color: "bg-wine-accent",
-    videoUrl: "http://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/campanha-lan%C3%A7amento/dra.thaynara.mov"
+    videoUrl: "https://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/campanha-lan%C3%A7amento/dra.thaynara.mp4"
   },
-  { 
-    id: 3, 
-    title: "Vinccibar.com", 
-    category: "Campanha/Lançamento", 
+  {
+    id: 3,
+    title: "Vinccibar.com",
+    category: "Campanha/Lançamento",
     color: "bg-wine-medium",
-    videoUrl: "http://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/campanha-lan%C3%A7amento/vinccibar.com_"
+    videoUrl: "https://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/campanha-lan%C3%A7amento/site-vinccibar-.mp4"
   },
-  { 
-    id: 4, 
-    title: "Didico's", 
-    category: "Eventos/Cobertura", 
+  {
+    id: 4,
+    title: "Didico's",
+    category: "Eventos/Cobertura",
     color: "bg-beige-dark",
-    videoUrl: "http://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/eventos-cobertura/didico_s_.mp4"
+    videoUrl: "https://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/eventos-cobertura/didico_s_.mp4"
   },
-  { 
-    id: 5, 
-    title: "Evento esportivo", 
-    category: "Eventos/Cobertura", 
+  {
+    id: 5,
+    title: "Evento esportivo",
+    category: "Eventos/Cobertura",
     color: "bg-wine-medium",
-    videoUrl: "http://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/eventos-cobertura/evento%20esportivo_.mpg"
+    videoUrl: "https://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/eventos-cobertura/evento-esportivo_.mp4"
   },
-  { 
-    id: 6, 
-    title: "Inaugaração Aya", 
-    category: "Eventos/Cobertura", 
+  {
+    id: 6,
+    title: "Inaugaração Aya",
+    category: "Eventos/Cobertura",
     color: "bg-wine-dark",
-    videoUrl: "http://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/eventos-cobertura/inaugura%C3%A7%C3%A3o%20aya_.mpg"
+    videoUrl: "https://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/eventos-cobertura/inaugura%C3%A7%C3%A3o-aya_.mp4"
   },
-  { 
-    id: 7, 
-    title: "Casa á venda", 
-    category: "Imobiliário", 
+  {
+    id: 7,
+    title: "Casa á venda",
+    category: "Imobiliário",
     color: "bg-wine-dark",
-    videoUrl: "http://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/imobili%C3%A1rio/casa%20%C3%A1%20venda_.mov"
+    videoUrl: "https://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/imobili%C3%A1rio/casa%20%C3%A1%20venda_.mp4"
   },
-  { 
-    id: 8, 
-    title: "Terreno á venda", 
-    category: "Imobiliário", 
+  {
+    id: 8,
+    title: "Terreno á venda",
+    category: "Imobiliário",
     color: "bg-wine-accent",
-    videoUrl: "http://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/imobili%C3%A1rio/terreno%20a%20venda_.mov"
+    videoUrl: "https://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/imobili%C3%A1rio/terreno%20a%20venda_.mp4"
   },
 ]
 
@@ -250,7 +250,7 @@ function VideoCard({ item, index }: { item: PortfolioItem; index: number; onOpen
             <source src={item.videoUrl} type={getVideoType(item.videoUrl)} />
           </video>
         )}
-        
+
         {/* Overlay */}
         <div className={`absolute inset-0 flex flex-col items-center justify-center p-6 transition-all duration-300 ${item.videoUrl ? 'bg-wine-dark/30 group-hover:bg-wine-dark/50' : 'bg-wine-dark/0 group-hover:bg-wine-dark/60'}`}>
           {/* Play icon for videos */}
@@ -260,20 +260,18 @@ function VideoCard({ item, index }: { item: PortfolioItem; index: number; onOpen
             </div>
           )}
           <span
-            className={`mb-2 text-xs font-medium uppercase tracking-widest ${
-              item.videoUrl || item.color !== "bg-beige-dark"
-                ? "text-cream/90"
-                : "text-wine-dark/70"
-            } transition-opacity duration-300 group-hover:text-cream/90`}
+            className={`mb-2 text-xs font-medium uppercase tracking-widest ${item.videoUrl || item.color !== "bg-beige-dark"
+              ? "text-cream/90"
+              : "text-wine-dark/70"
+              } transition-opacity duration-300 group-hover:text-cream/90`}
           >
             {item.category}
           </span>
           <h3
-            className={`text-center text-xl font-bold ${
-              item.videoUrl || item.color !== "bg-beige-dark"
-                ? "text-cream"
-                : "text-wine-dark"
-            } transition-all duration-300 group-hover:text-cream`}
+            className={`text-center text-xl font-bold ${item.videoUrl || item.color !== "bg-beige-dark"
+              ? "text-cream"
+              : "text-wine-dark"
+              } transition-all duration-300 group-hover:text-cream`}
           >
             {item.title}
           </h3>
@@ -373,8 +371,7 @@ export function PortfolioSection() {
             className="animate-on-scroll mx-auto mt-4 max-w-2xl text-pretty text-lg text-wine-medium/80 opacity-0"
             style={{ animationDelay: "0.2s" }}
           >
-            Explore nossos projetos mais recentes e descubra como transformamos
-            visões em realidade.
+            Explore meus projetos mais recentes.
           </p>
         </div>
 
@@ -388,11 +385,10 @@ export function PortfolioSection() {
               key={category}
               type="button"
               onClick={() => setActiveCategory(category)}
-              className={`rounded-full px-5 py-2 text-sm font-medium transition-all duration-300 ${
-                activeCategory === category
-                  ? "bg-wine-dark text-cream"
-                  : "bg-beige-light text-wine-dark hover:bg-beige-dark"
-              }`}
+              className={`rounded-full px-5 py-2 text-sm font-medium transition-all duration-300 ${activeCategory === category
+                ? "bg-wine-dark text-cream"
+                : "bg-beige-light text-wine-dark hover:bg-beige-dark"
+                }`}
             >
               {category}
             </button>
