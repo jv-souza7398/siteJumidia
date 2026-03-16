@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Instagram, Facebook, Linkedin, Twitter } from "lucide-react"
+import { Instagram, MessageCircle } from "lucide-react"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -20,10 +20,8 @@ export function Footer() {
       { label: "Produção Audiovisual", href: "#servicos" },
     ],
     social: [
-      { label: "Instagram", href: "https://instagram.com", icon: Instagram },
-      { label: "Facebook", href: "https://facebook.com", icon: Facebook },
-      { label: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-      { label: "Twitter", href: "https://twitter.com", icon: Twitter },
+      { label: "Instagram", href: "https://www.instagram.com/julia._osilva?igsh=eHZuY3l0OGpqdHg=", icon: Instagram },
+      { label: "WhatsApp", href: "https://wa.me/5511972802151", icon: MessageCircle },
     ],
   }
 
