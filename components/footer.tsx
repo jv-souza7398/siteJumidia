@@ -130,7 +130,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col items-center justify-between gap-4 py-8 md:flex-row">
           <p className="text-sm text-wine-medium/60">
-            © {currentYear} Studio Criativo. Todos os direitos reservados.
+            © {currentYear} Studio Ju. Todos os direitos reservados.
           </p>
           <div className="flex gap-6">
             <Link
