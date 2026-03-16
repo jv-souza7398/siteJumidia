@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Instagram, Facebook, Linkedin, Twitter } from "lucide-react"
+import { Instagram, MessageCircle } from "lucide-react"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -14,16 +14,13 @@ export function Footer() {
       { label: "Contato", href: "#contato" },
     ],
     services: [
-      { label: "Branding", href: "#servicos" },
-      { label: "Design Gráfico", href: "#servicos" },
-      { label: "Marketing Digital", href: "#servicos" },
-      { label: "Produção Audiovisual", href: "#servicos" },
+      { label: "Campanha/Lançamento", href: "#portfolio" },
+      { label: "Eventos/Cobertura", href: "#portfolio" },
+      { label: "Imobiliário", href: "#portfolio" },
     ],
     social: [
-      { label: "Instagram", href: "https://instagram.com", icon: Instagram },
-      { label: "Facebook", href: "https://facebook.com", icon: Facebook },
-      { label: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-      { label: "Twitter", href: "https://twitter.com", icon: Twitter },
+      { label: "Instagram", href: "https://www.instagram.com/julia._osilva?igsh=eHZuY3l0OGpqdHg=", icon: Instagram },
+      { label: "WhatsApp", href: "https://wa.me/5511972802151", icon: MessageCircle },
     ],
   }
 
@@ -133,7 +130,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col items-center justify-between gap-4 py-8 md:flex-row">
           <p className="text-sm text-wine-medium/60">
-            © {currentYear} Studio Criativo. Todos os direitos reservados.
+            © {currentYear} Studio Ju. Todos os direitos reservados.
           </p>
           <div className="flex gap-6">
             <Link
