@@ -14,10 +14,9 @@ export function Footer() {
       { label: "Contato", href: "#contato" },
     ],
     services: [
-      { label: "Branding", href: "#servicos" },
-      { label: "Design Gráfico", href: "#servicos" },
-      { label: "Marketing Digital", href: "#servicos" },
-      { label: "Produção Audiovisual", href: "#servicos" },
+      { label: "Campanha/Lançamento", href: "#portfolio" },
+      { label: "Eventos/Cobertura", href: "#portfolio" },
+      { label: "Imobiliário", href: "#portfolio" },
     ],
     social: [
       { label: "Instagram", href: "https://www.instagram.com/julia._osilva?igsh=eHZuY3l0OGpqdHg=", icon: Instagram },
