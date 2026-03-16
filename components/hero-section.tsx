@@ -43,9 +43,9 @@ export function HeroSection() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-32">
-        <div className="grid items-center gap-12 lg:grid-cols-5 lg:gap-16">
+        <div className="flex flex-col gap-12 lg:grid lg:grid-cols-5 lg:items-center lg:gap-16">
           {/* Left Column - Text Content (60%) */}
-          <div className="space-y-8 lg:col-span-3">
+          <div className="order-1 space-y-8 lg:col-span-3">
             <div className="animate-on-scroll opacity-0">
               <span className="inline-block rounded-full bg-beige-light px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-wine-dark">
                 Publicitária
@@ -171,42 +171,43 @@ export function HeroSection() {
                 </div>
               </div>
             </div>
+          </div>
 
-            <div
-              className="animate-on-scroll flex flex-wrap gap-4 pt-4 opacity-0"
-              style={{ animationDelay: "0.3s" }}
+          {/* Buttons Section - appears after images on mobile, below text on desktop */}
+          <div
+            className="animate-on-scroll order-3 flex flex-wrap gap-4 opacity-0 lg:order-3 lg:col-span-3"
+            style={{ animationDelay: "0.3s" }}
+          >
+            <a
+              href="#servicos"
+              className="group inline-flex items-center gap-2 rounded-full bg-wine-dark px-8 py-4 text-sm font-medium text-cream transition-all duration-300 hover:bg-wine-accent hover:scale-105"
             >
-              <a
-                href="#servicos"
-                className="group inline-flex items-center gap-2 rounded-full bg-wine-dark px-8 py-4 text-sm font-medium text-cream transition-all duration-300 hover:bg-wine-accent hover:scale-105"
+              Meus Serviços
+              <svg
+                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
               >
-                Meus Serviços
-                <svg
-                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </a>
-              <a
-                href="#portfolio"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-wine-dark px-8 py-4 text-sm font-medium text-wine-dark transition-all duration-300 hover:bg-wine-dark hover:text-cream"
-              >
-                Ver Portfólio
-              </a>
-            </div>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+            <a
+              href="#portfolio"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-wine-dark px-8 py-4 text-sm font-medium text-wine-dark transition-all duration-300 hover:bg-wine-dark hover:text-cream"
+            >
+              Ver Portfólio
+            </a>
           </div>
 
           {/* Right Column - Artistic Image Composition (40%) */}
-          <div className="relative lg:col-span-2">
+          <div className="relative order-2 lg:row-span-2 lg:col-span-2">
             {/* Expanded image overlay */}
             {hoveredImage && (
               <div 
