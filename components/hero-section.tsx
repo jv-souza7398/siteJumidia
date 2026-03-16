@@ -248,12 +248,12 @@ export function HeroSection() {
             )}
 
             {/* Grid Layout - 2 columns with offset pattern */}
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-4 md:gap-5">
               {/* Left Column - tall image on top, short image below */}
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-4 md:gap-5">
                 {/* Image 1 - Faculdade (tall) */}
                 <div
-                  className="animate-on-scroll group aspect-[3/4] cursor-pointer overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 hover:shadow-xl"
+                  className="animate-on-scroll group cursor-pointer overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 hover:shadow-xl"
                   style={{ animationDelay: "0.4s" }}
                   onMouseEnter={() => setHoveredImage("faculdade")}
                   onMouseLeave={() => setHoveredImage(null)}
@@ -261,13 +261,13 @@ export function HeroSection() {
                   <img
                     src="https://celebrated-vacherin-8f85dd.netlify.app/faculdade.png"
                     alt="Visor de câmera DSLR durante sessão de fotos na faculdade, 2024"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
 
                 {/* Image 2 - Estudio (short) */}
                 <div
-                  className="animate-on-scroll group aspect-square cursor-pointer overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 hover:shadow-xl"
+                  className="animate-on-scroll group cursor-pointer overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 hover:shadow-xl"
                   style={{ animationDelay: "0.5s" }}
                   onMouseEnter={() => setHoveredImage("estudio")}
                   onMouseLeave={() => setHoveredImage(null)}
@@ -275,16 +275,16 @@ export function HeroSection() {
                   <img
                     src="https://celebrated-vacherin-8f85dd.netlify.app/estudio.png"
                     alt="Estúdio de produção na faculdade com green screen e equipamentos profissionais, 2024"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
               </div>
 
               {/* Right Column - short image on top, tall image below */}
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-4 md:gap-5">
                 {/* Image 3 - Formatura (short) */}
                 <div
-                  className="animate-on-scroll group aspect-square cursor-pointer overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 hover:shadow-xl"
+                  className="animate-on-scroll group cursor-pointer overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 hover:shadow-xl"
                   style={{ animationDelay: "0.6s" }}
                   onMouseEnter={() => setHoveredImage("formatura")}
                   onMouseLeave={() => setHoveredImage(null)}
@@ -292,13 +292,13 @@ export function HeroSection() {
                   <img
                     src="https://celebrated-vacherin-8f85dd.netlify.app/formatura.png"
                     alt="Formatura"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
 
                 {/* Image 4 - CJF (tall) */}
                 <div
-                  className="animate-on-scroll group aspect-[3/4] cursor-pointer overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 hover:shadow-xl"
+                  className="animate-on-scroll group cursor-pointer overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 hover:shadow-xl"
                   style={{ animationDelay: "0.7s" }}
                   onMouseEnter={() => setHoveredImage("cjf")}
                   onMouseLeave={() => setHoveredImage(null)}
@@ -306,7 +306,7 @@ export function HeroSection() {
                   <img
                     src="https://celebrated-vacherin-8f85dd.netlify.app/cjf.png"
                     alt="CJF"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
               </div>
