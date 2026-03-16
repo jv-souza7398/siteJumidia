@@ -247,73 +247,68 @@ export function HeroSection() {
               </div>
             )}
 
-            <div className="relative h-[450px] w-full lg:h-[550px]">
-              {/* Image 1 - Camera viewfinder */}
-              <div
-                className="animate-on-scroll group absolute left-0 top-0 h-44 w-36 cursor-pointer overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 md:h-52 md:w-44"
-                style={{
-                  transform: "rotate(-12deg)",
-                  animationDelay: "0.4s",
-                }}
-                onMouseEnter={() => setHoveredImage("faculdade")}
-                onMouseLeave={() => setHoveredImage(null)}
-              >
-                <img
-                  src="https://celebrated-vacherin-8f85dd.netlify.app/faculdade.png"
-                  alt="Visor de câmera DSLR durante sessão de fotos na faculdade, 2024"
-                  className="h-full w-full object-contain p-2 transition-transform duration-500"
-                />
+            {/* Grid Layout - 2 columns with offset pattern */}
+            <div className="grid grid-cols-2 gap-4 md:gap-5">
+              {/* Left Column - tall image on top, short image below */}
+              <div className="flex flex-col gap-4 md:gap-5">
+                {/* Image 1 - Faculdade (tall) */}
+                <div
+                  className="animate-on-scroll group cursor-pointer overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 hover:shadow-xl"
+                  style={{ animationDelay: "0.4s" }}
+                  onMouseEnter={() => setHoveredImage("faculdade")}
+                  onMouseLeave={() => setHoveredImage(null)}
+                >
+                  <img
+                    src="https://celebrated-vacherin-8f85dd.netlify.app/faculdade.png"
+                    alt="Visor de câmera DSLR durante sessão de fotos na faculdade, 2024"
+                    className="w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                {/* Image 2 - Estudio (short) */}
+                <div
+                  className="animate-on-scroll group cursor-pointer overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 hover:shadow-xl"
+                  style={{ animationDelay: "0.5s" }}
+                  onMouseEnter={() => setHoveredImage("estudio")}
+                  onMouseLeave={() => setHoveredImage(null)}
+                >
+                  <img
+                    src="https://celebrated-vacherin-8f85dd.netlify.app/estudio.png"
+                    alt="Estúdio de produção na faculdade com green screen e equipamentos profissionais, 2024"
+                    className="w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
               </div>
 
-              {/* Image 2 - Studio setup */}
-              <div
-                className="animate-on-scroll group absolute right-4 top-8 h-48 w-40 cursor-pointer overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 md:h-56 md:w-48"
-                style={{
-                  transform: "rotate(8deg)",
-                  animationDelay: "0.5s",
-                }}
-                onMouseEnter={() => setHoveredImage("estudio")}
-                onMouseLeave={() => setHoveredImage(null)}
-              >
-                <img
-                  src="https://celebrated-vacherin-8f85dd.netlify.app/estudio.png"
-                  alt="Estúdio de produção na faculdade com green screen e equipamentos profissionais, 2024"
-                  className="h-full w-full object-contain p-2 transition-transform duration-500"
-                />
-              </div>
+              {/* Right Column - short image on top, tall image below */}
+              <div className="flex flex-col gap-4 md:gap-5">
+                {/* Image 3 - Formatura (short) */}
+                <div
+                  className="animate-on-scroll group cursor-pointer overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 hover:shadow-xl"
+                  style={{ animationDelay: "0.6s" }}
+                  onMouseEnter={() => setHoveredImage("formatura")}
+                  onMouseLeave={() => setHoveredImage(null)}
+                >
+                  <img
+                    src="https://celebrated-vacherin-8f85dd.netlify.app/formatura.png"
+                    alt="Formatura"
+                    className="w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
 
-              {/* Image 3 - Formatura */}
-              <div
-                className="animate-on-scroll group absolute bottom-20 left-8 h-52 w-44 cursor-pointer overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 md:h-60 md:w-52"
-                style={{
-                  transform: "rotate(5deg)",
-                  animationDelay: "0.6s",
-                }}
-                onMouseEnter={() => setHoveredImage("formatura")}
-                onMouseLeave={() => setHoveredImage(null)}
-              >
-                <img
-                  src="https://celebrated-vacherin-8f85dd.netlify.app/formatura.png"
-                  alt="Formatura"
-                  className="h-full w-full object-contain p-2 transition-transform duration-500"
-                />
-              </div>
-
-              {/* Image 4 - CJF */}
-              <div
-                className="animate-on-scroll group absolute bottom-0 right-0 h-40 w-36 cursor-pointer overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 md:h-48 md:w-40"
-                style={{
-                  transform: "rotate(-8deg)",
-                  animationDelay: "0.7s",
-                }}
-                onMouseEnter={() => setHoveredImage("cjf")}
-                onMouseLeave={() => setHoveredImage(null)}
-              >
-                <img
-                  src="https://celebrated-vacherin-8f85dd.netlify.app/cjf.png"
-                  alt="CJF"
-                  className="h-full w-full object-contain p-2 transition-transform duration-500"
-                />
+                {/* Image 4 - CJF (tall) */}
+                <div
+                  className="animate-on-scroll group cursor-pointer overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 hover:shadow-xl"
+                  style={{ animationDelay: "0.7s" }}
+                  onMouseEnter={() => setHoveredImage("cjf")}
+                  onMouseLeave={() => setHoveredImage(null)}
+                >
+                  <img
+                    src="https://celebrated-vacherin-8f85dd.netlify.app/cjf.png"
+                    alt="CJF"
+                    className="w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
               </div>
             </div>
           </div>
