@@ -66,13 +66,13 @@ export function HeroSection() {
             >
               <div className="relative">
                 {/* Decorative timeline line */}
-                <div 
+                <div
                   className="absolute left-0 top-2 w-0.5 bg-gradient-to-b from-wine-dark via-wine-accent to-beige-dark transition-all duration-500 ease-out"
-                  style={{ 
+                  style={{
                     height: isExpanded ? '100%' : '180px',
                   }}
                 />
-                
+
                 <div className="pl-6 space-y-6">
                   {/* Timeline markers */}
                   <div className="relative">
@@ -95,7 +95,7 @@ export function HeroSection() {
                       Fev/2023 - A Decisão
                     </span>
                     <p className="text-pretty text-lg leading-relaxed text-wine-medium/80">
-                      Dividida entre Geologia e Publicidade, decidi prestar vestibular para ambas. Em fevereiro, iniciei minha graduação em Publicidade e Propaganda com bolsa na Universidade Anhembi Morumbi e, em fevereiro, recebi a aprovação na Universidade Federal de Goiás (UFG) para Geologia.
+                      Dividida entre Geologia e Publicidade, decidi prestar vestibular para ambas. Em fevereiro, iniciei minha graduação em Publicidade e Propaganda com bolsa na Universidade Anhembi Morumbi e, em março, recebi a aprovação na Universidade Federal de Goiás (UFG) para Geologia.
                       {!isExpanded && (
                         <span className="text-wine-medium/60">...</span>
                       )}
@@ -136,7 +136,7 @@ export function HeroSection() {
                           Mar/2026 - O Propósito
                         </span>
                         <p className="text-pretty text-lg leading-relaxed text-wine-medium/80">
-                          Hoje, tenho certeza de que fiz a escolha certa. Admiro profundamente a Geologia, mas foi na Publicidade que encontrei meu verdadeiro propósito: conectar pessoas, comunicar ideias e transformar histórias em significado. Aprendi que, muitas vezes, precisamos renunciar a um caminho para viver outro ainda maior – e é exatamente isso que me move.
+                          Hoje, tenho certeza de que fiz a escolha certa. Admiro profundamente a Geologia, mas foi na Publicidade que encontrei meu verdadeiro propósito: conectar pessoas, comunicar ideias e transformar histórias em significado. Aprendi que, muitas vezes, precisamos renunciar a um caminho para viver outro ainda maior, e é exatamente isso que me move.
                         </p>
                       </div>
                     </div>
@@ -210,7 +210,7 @@ export function HeroSection() {
           <div className="relative order-2 lg:row-span-2 lg:col-span-2">
             {/* Expanded image overlay */}
             {hoveredImage && (
-              <div 
+              <div
                 className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-wine-dark/60 backdrop-blur-sm transition-opacity duration-300"
                 style={{ opacity: hoveredImage ? 1 : 0 }}
               >
@@ -221,19 +221,19 @@ export function HeroSection() {
                         hoveredImage === "faculdade"
                           ? "https://celebrated-vacherin-8f85dd.netlify.app/faculdade.png"
                           : hoveredImage === "estudio"
-                          ? "https://celebrated-vacherin-8f85dd.netlify.app/estudio.png"
-                          : hoveredImage === "formatura"
-                          ? "https://celebrated-vacherin-8f85dd.netlify.app/formatura.png"
-                          : "https://celebrated-vacherin-8f85dd.netlify.app/cjf.png"
+                            ? "https://celebrated-vacherin-8f85dd.netlify.app/estudio.png"
+                            : hoveredImage === "formatura"
+                              ? "https://celebrated-vacherin-8f85dd.netlify.app/formatura.png"
+                              : "https://celebrated-vacherin-8f85dd.netlify.app/cjf.png"
                       }
                       alt={
                         hoveredImage === "faculdade"
                           ? "Visor de câmera DSLR durante sessão de fotos na faculdade, 2024"
                           : hoveredImage === "estudio"
-                          ? "Estúdio de produção na faculdade com green screen e equipamentos profissionais, 2024"
-                          : hoveredImage === "formatura"
-                          ? "Formatura"
-                          : "CJF"
+                            ? "Estúdio de produção na faculdade com green screen e equipamentos profissionais, 2024"
+                            : hoveredImage === "formatura"
+                              ? "Formatura"
+                              : "CJF"
                       }
                       className="max-h-[70vh] w-auto rounded-2xl object-contain"
                     />
