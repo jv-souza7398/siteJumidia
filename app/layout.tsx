@@ -4,7 +4,7 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Studio Ju | Agência Publicidade',
+  title: 'Studio Ju | Produção Publicitária',
   description: 'Transformamos ideias em experiências visuais impactantes. Somos uma agência de publicidade pioneira, criativa e inovadora.',
   generator: 'v0.app',
   keywords: ['publicidade', 'marketing', 'design', 'branding', 'criativo', 'agência'],
