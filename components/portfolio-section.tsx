@@ -172,7 +172,8 @@ const portfolioItems: PortfolioItem[] = [
     title: "Casa á venda",
     category: "Imobiliário",
     color: "bg-wine-dark",
-    videoUrl: ""
+    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1774036193/Casa_%C3%A1_venda_2_bcmuqd.mp4",
+    thumbnail: "https://res.cloudinary.com/dp5cklozk/video/upload/v1774036193/Casa_%C3%A1_venda_2_bcmuqd.mp4"
   },
   {
     id: 8,
