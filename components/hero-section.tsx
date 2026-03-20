@@ -7,6 +7,8 @@ export function HeroSection() {
   const [isExpanded, setIsExpanded] = useState(false)
   const contentRef = useRef<HTMLDivElement>(null)
   const [hoveredImage, setHoveredImage] = useState<string | null>(null)
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
+  const modalVideoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,6 +30,17 @@ export function HeroSection() {
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded)
+  }
+
+  const openVideoModal = () => {
+    setIsVideoModalOpen(true)
+  }
+
+  const closeVideoModal = () => {
+    setIsVideoModalOpen(false)
+    if (modalVideoRef.current) {
+      modalVideoRef.current.pause()
+    }
   }
 
   return (
@@ -243,14 +256,54 @@ export function HeroSection() {
               </div>
             )}
 
+            {/* Video Modal */}
+            {isVideoModalOpen && (
+              <div
+                className="fixed inset-0 z-50 flex items-center justify-center bg-wine-dark/80 backdrop-blur-sm"
+                onClick={closeVideoModal}
+              >
+                <div className="relative max-h-[90vh] max-w-[90vw] overflow-hidden rounded-3xl bg-black shadow-2xl">
+                  <button
+                    onClick={closeVideoModal}
+                    className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-wine-dark/80 text-cream transition-all hover:bg-wine-accent"
+                    aria-label="Fechar vídeo"
+                  >
+                    <svg
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                  <video
+                    ref={modalVideoRef}
+                    src="https://res.cloudinary.com/dp5cklozk/video/upload/v1774034053/videoHome_rlqfch.mp4"
+                    autoPlay
+                    controls
+                    playsInline
+                    className="max-h-[85vh] w-auto"
+                    onClick={(e) => e.stopPropagation()}
+                  />
+                </div>
+              </div>
+            )}
+
             {/* Grid Layout - 2 columns with offset pattern */}
             <div className="grid grid-cols-2 gap-4 md:gap-5">
               {/* Left Column - video on top, short image below */}
               <div className="flex flex-col gap-4 md:gap-5">
                 {/* Video 1 - Home Video */}
                 <div
-                  className="animate-on-scroll overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 hover:shadow-xl"
+                  className="animate-on-scroll group relative cursor-pointer overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 hover:shadow-xl"
                   style={{ animationDelay: "0.4s" }}
+                  onClick={openVideoModal}
                 >
                   <video
                     src="https://res.cloudinary.com/dp5cklozk/video/upload/v1774034053/videoHome_rlqfch.mp4"
@@ -258,8 +311,20 @@ export function HeroSection() {
                     muted
                     loop
                     playsInline
-                    className="w-full object-contain"
+                    className="w-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
+                  {/* Play icon overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-wine-dark/0 transition-all duration-300 group-hover:bg-wine-dark/30">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-cream/90 opacity-0 shadow-lg transition-all duration-300 group-hover:opacity-100">
+                      <svg
+                        className="h-6 w-6 text-wine-dark ml-1"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Image 2 - Estudio (short) */}
