@@ -9,6 +9,7 @@ interface PortfolioItem {
   category: string
   color: string
   videoUrl?: string
+  thumbnail?: string
 }
 
 // Check if video format is supported
@@ -123,42 +124,48 @@ const portfolioItems: PortfolioItem[] = [
     title: "Doc. Vincci",
     category: "Campanha/Lançamento",
     color: "bg-wine-dark",
-    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773937375/Doc._Vincci_oen3nf.mp4"
+    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773937375/Doc._Vincci_oen3nf.mp4",
+    thumbnail: "https://res.cloudinary.com/dp5cklozk/video/upload/so_0/v1773937375/Doc._Vincci_oen3nf.jpg"
   },
   {
     id: 2,
     title: "Dra. Thaynara",
     category: "Campanha/Lançamento",
     color: "bg-wine-accent",
-    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773937376/Dra.Thaynara_fppcet.mp4"
+    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773937376/Dra.Thaynara_fppcet.mp4",
+    thumbnail: "https://res.cloudinary.com/dp5cklozk/video/upload/so_0/v1773937376/Dra.Thaynara_fppcet.jpg"
   },
   {
     id: 3,
     title: "Vinccibar.com",
     category: "Campanha/Lançamento",
     color: "bg-wine-medium",
-    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773937379/Site-Vinccibar-_hvth3u.mp4"
+    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773937379/Site-Vinccibar-_hvth3u.mp4",
+    thumbnail: "https://res.cloudinary.com/dp5cklozk/video/upload/so_0/v1773937379/Site-Vinccibar-_hvth3u.jpg"
   },
   {
     id: 4,
     title: "Didico's",
     category: "Eventos/Cobertura",
     color: "bg-beige-dark",
-    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773937375/Doc._Vincci_oen3nf.mp4"
+    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773938542/Didicos_yvpikd.mp4",
+    thumbnail: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773938542/Didicos_yvpikd.mp4"
   },
   {
     id: 5,
     title: "Evento esportivo",
     category: "Eventos/Cobertura",
     color: "bg-wine-medium",
-    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773937466/Evento-esportivo__yiofc5.mp4"
+    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773937466/Evento-esportivo__yiofc5.mp4",
+    thumbnail: "https://res.cloudinary.com/dp5cklozk/video/upload/so_0/v1773937466/Evento-esportivo__yiofc5.jpg"
   },
   {
     id: 6,
     title: "Inaugaração Aya",
     category: "Eventos/Cobertura",
     color: "bg-wine-dark",
-    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773937474/Inaugura%C3%A7%C3%A3o-Aya__ihzuri.mp4"
+    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773937474/Inaugura%C3%A7%C3%A3o-Aya__ihzuri.mp4",
+    thumbnail: "https://res.cloudinary.com/dp5cklozk/video/upload/so_0/v1773937474/Inaugura%C3%A7%C3%A3o-Aya__ihzuri.jpg"
   },
   {
     id: 7,
@@ -172,7 +179,8 @@ const portfolioItems: PortfolioItem[] = [
     title: "Terreno á venda",
     category: "Imobiliário",
     color: "bg-wine-accent",
-    videoUrl: ""
+    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1774035258/Terreno_a_venda_2_h7vsm0.mp4",
+    thumbnail: "https://res.cloudinary.com/dp5cklozk/video/upload/v1774035258/Terreno_a_venda_2_h7vsm0.mp4"
   },
 ]
 
@@ -184,8 +192,10 @@ function VideoCard({ item, index }: { item: PortfolioItem; index: number; onOpen
   const playPromiseRef = useRef<Promise<void> | null>(null)
   const [videoLoaded, setVideoLoaded] = useState(false)
   const [videoError, setVideoError] = useState(false)
+  const [isHovered, setIsHovered] = useState(false)
 
   const handleMouseEnter = () => {
+    setIsHovered(true)
     if (videoRef.current && videoLoaded) {
       playPromiseRef.current = videoRef.current.play()
       playPromiseRef.current?.catch(() => {
@@ -195,6 +205,7 @@ function VideoCard({ item, index }: { item: PortfolioItem; index: number; onOpen
   }
 
   const handleMouseLeave = () => {
+    setIsHovered(false)
     if (videoRef.current) {
       // Wait for any pending play promise before pausing
       if (playPromiseRef.current) {
@@ -233,11 +244,20 @@ function VideoCard({ item, index }: { item: PortfolioItem; index: number; onOpen
       <div
         className={`relative aspect-[4/3] overflow-hidden rounded-2xl ${item.color} transition-all duration-500 hover:shadow-2xl`}
       >
-        {/* Video Background */}
+        {/* Thumbnail/Cover Image */}
+        {item.thumbnail && (
+          <img
+            src={item.thumbnail}
+            alt={item.title}
+            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${isHovered && videoLoaded ? 'opacity-0' : 'opacity-100'}`}
+          />
+        )}
+
+        {/* Video Background - plays on hover */}
         {item.videoUrl && !videoError && (
           <video
             ref={videoRef}
-            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
+            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${isHovered && videoLoaded ? 'opacity-100' : 'opacity-0'}`}
             muted
             loop
             playsInline
