@@ -179,7 +179,8 @@ const portfolioItems: PortfolioItem[] = [
     title: "Terreno á venda",
     category: "Imobiliário",
     color: "bg-wine-accent",
-    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1774035258/Terreno_a_venda_2_h7vsm0.mp4"
+    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1774035258/Terreno_a_venda_2_h7vsm0.mp4",
+    thumbnail: "https://res.cloudinary.com/dp5cklozk/video/upload/v1774035258/Terreno_a_venda_2_h7vsm0.mp4"
   },
 ]
 
