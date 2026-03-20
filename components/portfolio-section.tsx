@@ -123,56 +123,56 @@ const portfolioItems: PortfolioItem[] = [
     title: "Doc. Vincci",
     category: "Campanha/Lançamento",
     color: "bg-wine-dark",
-    videoUrl: "https://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/campanha-lan%C3%A7amento/doc.%20vincci.mp4"
+    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773937375/Doc._Vincci_oen3nf.mp4"
   },
   {
     id: 2,
     title: "Dra. Thaynara",
     category: "Campanha/Lançamento",
     color: "bg-wine-accent",
-    videoUrl: "https://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/campanha-lan%C3%A7amento/dra.thaynara.mp4"
+    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773937376/Dra.Thaynara_fppcet.mp4"
   },
   {
     id: 3,
     title: "Vinccibar.com",
     category: "Campanha/Lançamento",
     color: "bg-wine-medium",
-    videoUrl: "https://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/campanha-lan%C3%A7amento/site-vinccibar-.mp4"
+    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773937379/Site-Vinccibar-_hvth3u.mp4"
   },
   {
     id: 4,
     title: "Didico's",
     category: "Eventos/Cobertura",
     color: "bg-beige-dark",
-    videoUrl: "https://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/eventos-cobertura/didico_s_.mp4"
+    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773937375/Doc._Vincci_oen3nf.mp4"
   },
   {
     id: 5,
     title: "Evento esportivo",
     category: "Eventos/Cobertura",
     color: "bg-wine-medium",
-    videoUrl: "https://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/eventos-cobertura/evento-esportivo_.mp4"
+    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773937466/Evento-esportivo__yiofc5.mp4"
   },
   {
     id: 6,
     title: "Inaugaração Aya",
     category: "Eventos/Cobertura",
     color: "bg-wine-dark",
-    videoUrl: "https://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/eventos-cobertura/inaugura%C3%A7%C3%A3o-aya_.mp4"
+    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773937474/Inaugura%C3%A7%C3%A3o-Aya__ihzuri.mp4"
   },
   {
     id: 7,
     title: "Casa á venda",
     category: "Imobiliário",
     color: "bg-wine-dark",
-    videoUrl: "https://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/imobili%C3%A1rio/casa%20%C3%A1%20venda_.mp4"
+    videoUrl: ""
   },
   {
     id: 8,
     title: "Terreno á venda",
     category: "Imobiliário",
     color: "bg-wine-accent",
-    videoUrl: "https://celebrated-vacherin-8f85dd.netlify.app/videosportifolio/imobili%C3%A1rio/terreno%20a%20venda_.mp4"
+    videoUrl: ""
   },
 ]
 

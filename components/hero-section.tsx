@@ -221,10 +221,10 @@ export function HeroSection() {
                         hoveredImage === "faculdade"
                           ? "https://celebrated-vacherin-8f85dd.netlify.app/faculdade.png"
                           : hoveredImage === "estudio"
-                            ? "https://celebrated-vacherin-8f85dd.netlify.app/estudio.png"
+                            ? "https://res.cloudinary.com/dp5cklozk/image/upload/v1773937235/estudio_xu6vrl.png"
                             : hoveredImage === "formatura"
-                              ? "https://celebrated-vacherin-8f85dd.netlify.app/formatura.png"
-                              : "https://celebrated-vacherin-8f85dd.netlify.app/cjf.png"
+                              ? "https://res.cloudinary.com/dp5cklozk/image/upload/v1773937236/formatura_kfcxpd.png"
+                              : "https://res.cloudinary.com/dp5cklozk/image/upload/v1773937245/cjf_kicign.png"
                       }
                       alt={
                         hoveredImage === "faculdade"
@@ -274,7 +274,7 @@ export function HeroSection() {
                   onMouseLeave={() => setHoveredImage(null)}
                 >
                   <img
-                    src="https://celebrated-vacherin-8f85dd.netlify.app/estudio.png"
+                    src="https://res.cloudinary.com/dp5cklozk/image/upload/v1773937235/estudio_xu6vrl.png"
                     alt="Estúdio de produção na faculdade com green screen e equipamentos profissionais, 2024"
                     className="w-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
@@ -291,7 +291,7 @@ export function HeroSection() {
                   onMouseLeave={() => setHoveredImage(null)}
                 >
                   <img
-                    src="https://celebrated-vacherin-8f85dd.netlify.app/formatura.png"
+                    src="https://res.cloudinary.com/dp5cklozk/image/upload/v1773937236/formatura_kfcxpd.png"
                     alt="Formatura"
                     className="w-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
@@ -305,7 +305,7 @@ export function HeroSection() {
                   onMouseLeave={() => setHoveredImage(null)}
                 >
                   <img
-                    src="https://celebrated-vacherin-8f85dd.netlify.app/cjf.png"
+                    src="https://res.cloudinary.com/dp5cklozk/image/upload/v1773937245/cjf_kicign.png"
                     alt="CJF"
                     className="w-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
