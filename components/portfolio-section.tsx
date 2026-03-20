@@ -148,8 +148,8 @@ const portfolioItems: PortfolioItem[] = [
     title: "Didico's",
     category: "Eventos/Cobertura",
     color: "bg-beige-dark",
-    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773937375/Doc._Vincci_oen3nf.mp4",
-    thumbnail: "https://res.cloudinary.com/dp5cklozk/video/upload/so_0/v1773937375/Doc._Vincci_oen3nf.jpg"
+    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773938542/Didicos_yvpikd.mp4",
+    thumbnail: "https://res.cloudinary.com/dp5cklozk/video/upload/v1773938542/Didicos_yvpikd.mp4"
   },
   {
     id: 5,
@@ -179,7 +179,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Terreno á venda",
     category: "Imobiliário",
     color: "bg-wine-accent",
-    videoUrl: ""
+    videoUrl: "https://res.cloudinary.com/dp5cklozk/video/upload/v1774035258/Terreno_a_venda_2_h7vsm0.mp4"
   },
 ]
 
