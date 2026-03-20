@@ -218,28 +218,23 @@ export function HeroSection() {
                   <div className="relative max-h-[75vh] max-w-[80vw] overflow-hidden rounded-3xl bg-cream p-4 shadow-2xl">
                     <img
                       src={
-                        hoveredImage === "faculdade"
-                          ? "https://celebrated-vacherin-8f85dd.netlify.app/faculdade.png"
-                          : hoveredImage === "estudio"
-                            ? "https://res.cloudinary.com/dp5cklozk/image/upload/v1773937235/estudio_xu6vrl.png"
-                            : hoveredImage === "formatura"
-                              ? "https://res.cloudinary.com/dp5cklozk/image/upload/v1773937236/formatura_kfcxpd.png"
-                              : "https://res.cloudinary.com/dp5cklozk/image/upload/v1773937245/cjf_kicign.png"
+                        hoveredImage === "estudio"
+                          ? "https://res.cloudinary.com/dp5cklozk/image/upload/v1773937235/estudio_xu6vrl.png"
+                          : hoveredImage === "formatura"
+                            ? "https://res.cloudinary.com/dp5cklozk/image/upload/v1773937236/formatura_kfcxpd.png"
+                            : "https://res.cloudinary.com/dp5cklozk/image/upload/v1773937245/cjf_kicign.png"
                       }
                       alt={
-                        hoveredImage === "faculdade"
-                          ? "Visor de câmera DSLR durante sessão de fotos na faculdade, 2024"
-                          : hoveredImage === "estudio"
-                            ? "Estúdio de produção na faculdade com green screen e equipamentos profissionais, 2024"
-                            : hoveredImage === "formatura"
-                              ? "Formatura"
-                              : "CJF"
+                        hoveredImage === "estudio"
+                          ? "Estúdio de produção na faculdade com green screen e equipamentos profissionais, 2024"
+                          : hoveredImage === "formatura"
+                            ? "Formatura"
+                            : "CJF"
                       }
                       className="max-h-[70vh] w-auto rounded-2xl object-contain"
                     />
                   </div>
                   <div className="rounded-full bg-wine-dark/80 px-4 py-2 text-sm text-cream">
-                    {hoveredImage === "faculdade" && "Faculdade, 2024"}
                     {hoveredImage === "estudio" && "Estúdio, 2024"}
                     {hoveredImage === "formatura" && "Formatura"}
                     {hoveredImage === "cjf" && "CJF"}
@@ -250,19 +245,20 @@ export function HeroSection() {
 
             {/* Grid Layout - 2 columns with offset pattern */}
             <div className="grid grid-cols-2 gap-4 md:gap-5">
-              {/* Left Column - tall image on top, short image below */}
+              {/* Left Column - video on top, short image below */}
               <div className="flex flex-col gap-4 md:gap-5">
-                {/* Image 1 - Faculdade (tall) */}
+                {/* Video 1 - Home Video */}
                 <div
-                  className="animate-on-scroll group cursor-pointer overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 hover:shadow-xl"
+                  className="animate-on-scroll overflow-hidden rounded-2xl bg-cream opacity-0 shadow-lg transition-all duration-500 hover:z-20 hover:shadow-xl"
                   style={{ animationDelay: "0.4s" }}
-                  onMouseEnter={() => setHoveredImage("faculdade")}
-                  onMouseLeave={() => setHoveredImage(null)}
                 >
-                  <img
-                    src="https://celebrated-vacherin-8f85dd.netlify.app/faculdade.png"
-                    alt="Visor de câmera DSLR durante sessão de fotos na faculdade, 2024"
-                    className="w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                  <video
+                    src="https://res.cloudinary.com/dp5cklozk/video/upload/v1774034053/videoHome_rlqfch.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full object-contain"
                   />
                 </div>
 
